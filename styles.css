@@ -1,0 +1,319 @@
+/* --- Global Styles & Resets --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Negrita Pro', sans-serif; /* Corrected typo */
+  background-color: #f5c518;
+  color: #000000;
+  overflow-x: hidden; /* Prevents accidental horizontal scrolling */
+}
+
+.site-wide-container {
+  width: 100%;
+  max-width: 1600px; /* Optional: Constrains max width on very large screens */
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.header-container {
+  padding: 10px 20px;
+}
+
+.header-wrapper {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header-nav {
+  width: 100%;
+  max-width: 1158px;
+  height: 67px;
+  margin: 40px auto 0 auto;
+  padding: 0 40px;
+  background: #FFEBB5;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px 0px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.social-wrapper {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  top: 44px;
+  right: 0;
+}
+
+.social-icon {
+  width: 67px;
+  height: 67px;
+  background: #FFEBB5;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px 0px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* --- Main Content & Hero Image --- */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main-content img {
+  width: 100%;
+  max-width: 1200px; /* Control max size of hero image */
+  height: auto;
+}
+
+/* --- Scrolling Ticker --- */
+.scroller-container {
+  width: 100%;
+  margin: 40px 0;
+  height: 40px;
+  background: #000000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.scroller-content {
+  display: flex;
+  white-space: nowrap;
+  /* Animation is now active! */
+  /* animation: scroll 30s linear infinite; */
+}
+
+.scroller-content span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* --- About Game Section --- */
+.about-game {
+  padding: 40px 20px;
+  margin-top: -39px;
+  background-image: url('Rectangle 6701.png');
+  background-repeat: repeat;
+  background-size: 20px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.game-character, .game-info {
+  flex: 1; /* Each takes up 50% of the space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-character img, .game-info img {
+  max-width: 100%;
+  height: auto;
+}
+
+.highlight-banner {
+  background: #F22727;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin: 40px auto 0 auto;
+  max-width: 599px;
+  width: 90%;
+  border: 3px solid #000000;
+  border-radius: 8px;
+}
+
+.highlight-banner p {
+  font-family: 'Negrita Pro', sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* --- New Page Sections (from inline styles) --- */
+.page-section {
+  padding: 48px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-light-yellow {
+  background-color: #f9e79f;
+}
+
+.section-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* --- Footer Section --- */
+.footer-section {
+  padding: 32px 20px;
+  background: linear-gradient(to right, #f5c518 0 10%, transparent 10% 90%, #f5c518 90% 100%);
+}
+
+.footer-image {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ############################################## */
+/* ---      MOBILE RESPONSIVE STYLES          --- */
+/* ############################################## */
+
+/* --- Medium Devices (Tablets, smaller desktops) --- */
+@media (max-width: 1200px) {
+  .header-wrapper {
+    /* Stack header elements sooner for better spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .header-nav {
+    margin-top: 10px;
+  }
+  .social-wrapper {
+    position: static; /* Remove absolute positioning */
+  }
+}
+
+/* --- Tablets --- */
+@media (max-width: 992px) {
+  .nav-menu {
+    gap: 20px;
+  }
+  .nav-menu a {
+    font-size: 20px;
+  }
+  .about-container {
+    flex-direction: column; /* Stack character and info vertically */
+    gap: 20px;
+  }
+}
+
+/* --- Mobile Devices --- */
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column; /* Stack logo and nav links */
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+  .nav-menu {
+    flex-wrap: wrap; /* Allow nav links to wrap onto new lines */
+    justify-content: center;
+    gap: 10px 15px;
+  }
+  .nav-menu a {
+    font-size: 18px;
+  }
+  .highlight-banner p {
+    font-size: 20px;
+  }
+  .scroller-content span {
+    font-size: 20px;
+  }
+  /* Reduce padding on sections for mobile */
+  .page-section, .about-game, .footer-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .footer-image {
+    max-width: 80%; /* Make footer image larger on mobile */
+  }
+}
+
+/* --- Small Mobile Devices --- */
+@media (max-width: 480px) {
+  .nav-menu a {
+    font-size: 16px;
+  }
+  .game-logo {
+    font-size: 22px;
+  }
+  .social-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .social-icon img {
+    width: 25px;
+    height: 25px;
+  }
+  .highlight-banner p {
+    font-size: 16px;
+  }
+  .scroller-content span {
+    font-size: 16px;
+  }
+  .section-image {
+    max-width: 100%; /* Allow images to take full width of the container */
+  }
+  .footer-image {
+    max-width: 95%;
+  }
+}
