@@ -30,7 +30,7 @@ body {
 
 .header-nav {
   width: 100%;
-  max-width: 1158px;
+  max-width: 11500px;
   height: 67px;
   margin: 40px auto 0 auto;
   padding: 0 40px;
@@ -69,9 +69,13 @@ body {
 .social-wrapper {
   position: absolute;
   display: flex;
-  gap: 20px;
-  top: 44px;
-  right: 0;
+  /* gap: 23px;
+  top: 4px;
+  right: 10px; */
+
+  gap: 23px;
+  top: 3px;
+  right: -122px;
 }
 
 .social-icon {
@@ -87,8 +91,8 @@ body {
   transition: transform 0.2s;
 }
 
-.social-icon:hover {
-  transform: translateY(-4px);
+.social-icon.telegram {
+  margin-right: -180px;
 }
 
 .social-icon img {
@@ -184,13 +188,13 @@ body {
 
 .highlight-banner p {
   font-family: 'Negrita Pro', sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   margin: 0;
 }
 
 /* --- New Page Sections (from inline styles) --- */
 .page-section {
-  padding: 48px 20px;
+  padding: 12px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
